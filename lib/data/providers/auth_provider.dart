@@ -67,7 +67,7 @@ class AuthProvider with ChangeNotifier {
       throw e;
     }
   }
-
+  //ADDED THE BUILDCONTEXT AND NAVIGATION TO THE MAIN PAGE
   Future<void> verifyOTP(BuildContext context, String otp) async {
     try {
       final AuthCredential credential = PhoneAuthProvider.credential(

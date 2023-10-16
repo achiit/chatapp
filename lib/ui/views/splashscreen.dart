@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'package:chatapp/ui/views/bottomnavbar/bottomnavbar.dart';
 import 'package:chatapp/ui/views/introscreens/intromain.dart';
+import 'package:chatapp/ui/views/proflescreens/mainscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -35,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen>
         // Navigate to the next screen or perform an action
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => OnboardingScreen()),
+          MaterialPageRoute(builder: (context) => /* OnboardingScreen() */BottomNavBar()),
         );
       },
     );

@@ -14,12 +14,11 @@ import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class RegistrationScreen extends StatelessWidget {
-  bool _isVerifying = false;
 
   verifyPhone(BuildContext context, String number) {
     try {
       Provider.of<AuthProvider>(context, listen: false)
-          .verifyPhone(number,context)
+          .verifyPhone(number, context)
           .then((value) {
         //Navigator.of(context).pushNamed(VerifyScreen.routeArgs);
         log("done");
@@ -102,7 +101,7 @@ class RegistrationScreen extends StatelessWidget {
                   filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                   child: Center(
                     child: Lottie.asset("assets/lottie/animation_lluo4f22.json",
-                        height: 200),
+                        height: 240),
                   ),
                 ),
               ),

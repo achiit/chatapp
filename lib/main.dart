@@ -1,5 +1,6 @@
 import 'package:chatapp/constants/colors.dart';
 import 'package:chatapp/data/providers/auth_provider.dart';
+import 'package:chatapp/navigationviewmodel.dart';
 import 'package:chatapp/ui/views/splashscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider.value(
-      value: AuthProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+ChangeNotifierProvider(create: (_) => NavigationViewModel()),
+      ],
+   
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
